@@ -45,7 +45,7 @@ a:hover {
     }
 
 .scroller {
-    height: 200px;
+    height: 100px;
     margin: -50px auto;
     position: relative;
     width: 90%;
@@ -69,7 +69,7 @@ a:hover {
 }
 
 .scroll {
-    height: 150px;
+    height: 100px;
     width: 250px;
     display: flex;
     align-items: center;
@@ -90,7 +90,7 @@ a:hover {
 .scroller::after {
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     content: '';
-    height: 100%;
+    height: 120%;
     position: absolute;
     width: 15%;
     z-index: 2;
@@ -134,5 +134,5 @@ p {
     font-family: "TwCenMTStd";
     text-align: center;
     font-size: 12px;
-    margin-top: 50px;
+    margin-top: 200px;
 }
