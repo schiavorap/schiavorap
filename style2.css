@@ -9,6 +9,7 @@ html {
 
 body{
     max-height: 100px;
+    
 }
 
 h1{
@@ -45,68 +46,6 @@ a:hover {
     
     }
 
-.scroller {
-    height: 150px;
-    margin: -50px auto;
-    position: relative;
-    width: 90%;
-    display: grid;
-    place-items: center;
-}
-
-.scroller-track {
-    display: flex;
-    width: calc(250px * 14);
-    animation: scroll 40s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
-.scroll {
-    height: 100px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    perspective: 100px;
-}
-.scroll img {
-    width: 50%;
-    transition: transform 1s;
-}
-
-.scroll img:hover {
-    transform: translatez(20px);
-
-}
-
-.scroller::before,
-.scroller::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: '';
-    height: 120%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-}
-
-.scroller::before{
-    left: -10%;
-    top: 0;
-}
-
-.scroller::after{
-    right: -10%;
-    top: 0;
-    transform: rotateZ(180deg);
-}
 
 .Socials {
     position: relative;
@@ -143,13 +82,27 @@ p {
 }
 
 
+
+@media screen and (min-width: 901px) {
 .flex-container small {
     font-family: "TwCenMTStd";
     width: 100%;
     height: 100%;
-    font-size: 100%;
+    font-size: 25px;
     position: absolute;
     text-align: center;
+}
+}
+
+@media screen and (max-width: 900px) {
+.flex-container small {
+    font-family: "TwCenMTStd";
+    width: 97%;
+    height: 100%;
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+}
 }
 
 
