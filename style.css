@@ -3,6 +3,8 @@
     src: url(Fonts/TwCenMTStd.otf);
 }
 
+
+
 html {  
     overflow: hidden;
 }
@@ -44,69 +46,7 @@ a:hover {
     
     }
 
-.scroller {
-    height: 100px;
-    margin: -50px auto;
-    position: relative;
-    width: 90%;
-    display: grid;
-    place-items: center;
-}
 
-.scroller-track {
-    display: flex;
-    width: calc(250px * 14);
-    animation: scroll 40s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
-.scroll {
-    height: 100px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    perspective: 100px;
-    overflow: hidden;
-}
-.scroll img {
-    width: 50%;
-    transition: transform 1s;
-}
-
-.scroll img:hover {
-    transform: translatez(20px);
-
-}
-
-.scroller::before,
-.scroller::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: '';
-    height: 120%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-}
-
-.scroller::before{
-    left: -10%;
-    top: 0;
-}
-
-.scroller::after{
-    right: -10%;
-    top: 0;
-    transform: rotateZ(180deg);
-}
 
 .Socials {
     position: relative;
@@ -140,6 +80,77 @@ p {
     bottom: 0px;
     left: 0px;
     padding-top: 20px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+  top: -50px;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 80%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+
+@media screen and (min-width: 901px) {
+
+.logos-slide img {
+  height: 100px;
+  width: 100px;
+  margin: 0 40px;
+  transition: transform .2s;
+}
+}
+
+@media screen and (max-width: 900px) {
+
+.logos-slide img {
+  height: 50px;
+  width: 50px;
+  margin: 0 40px;
+  transition: transform .2s;
+}
+}
+
+
+.logos-slide img:hover {
+  animation-play-state: paused;
+  transform: scale(1.5);
 }
 
 .btn {
