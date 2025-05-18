@@ -3,9 +3,12 @@
     src: url(Fonts/TwCenMTStd.otf);
 }
 
+html {  
+    overflow: hidden;
+}
+
 body{
     max-height: 100px;
-    overflow-x: hidden
 }
 
 h1{
@@ -114,7 +117,7 @@ a:hover {
 }
 
 .Socials img {
-    width: 50px;
+    width: 40px;
     padding: 20px;
 }
 
